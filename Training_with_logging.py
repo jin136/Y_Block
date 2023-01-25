@@ -22,9 +22,9 @@ from neptune.new.integrations.tensorflow_keras import NeptuneCallback
 if __name__ == "__main__":
 
     run = neptune.init_run(
-            project="vuyuanh/gender-classification1",
-            api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiJkYWYxMDUxNy1hOGUzLTRmN2YtOWQzNi0xZGYzNGYwMmQ0NTcifQ==",
-        )  # gender classification : Male / Female / Baby
+                project="dlwls9678/butterfly-moth",
+                api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiJkZWY2NmNkNC0zNDVlLTQwZGUtODk0Mi03NGMzNTNkOGIwZWMifQ==",
+            )  # butterfly and moth 100 classes
 
     model_list=['densenet201','densenet201_scratch','resnet50','resnet50_scratch','mobilnetv2','mobilnetv2_scratch',
                 'efficientnet','efficientnet_scratch','Y_Block', 'Y_Dense_Block','shuffleNetv2']
@@ -44,7 +44,7 @@ if __name__ == "__main__":
             "metrics": ['acc'],
 
             #dataset
-            "num_classes": 3,   # butterfly:100 / gender:4 - 3(No none)/ age:30 (with none) - 29 (No none) - 10 (unite)
+            "num_classes": 100,   # butterfly:100 / gender:4 - 3(No none)/ age:30 (with none) - 29 (No none) - 10 (unite)
             "img_shape": (224,224),
             
             #directory
@@ -110,4 +110,4 @@ if __name__ == "__main__":
     run.stop()
 
 
-    #test123
+    #test
